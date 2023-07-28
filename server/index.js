@@ -47,7 +47,7 @@ app.use("/api/v1/reach", contactUsRoute);
 
 //def route
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
   return res.json({
     success: true,
     message: "Your server is up and running....",
