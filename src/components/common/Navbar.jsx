@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiFillDownCircle, AiOutlineShoppingCart } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import { BsChevronDown } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { Link, matchPath, useLocation } from "react-router-dom";
@@ -57,11 +56,11 @@ function Navbar() {
         {/* Navigation links */}
         <nav className="md:block md:static sm:absolute">
           <div
-            className={`md:static sm:absolute sm:w-[94vw] md:w-full sm:h-[450px] md:h-full sm:-ml-[1vw] md:ml-0 sm:top-10 md:mt-0 ${
+            className={`  md:static sm:absolute sm:w-[94vw] md:w-full sm:h-[450px] md:h-full sm:-ml-[1vw] md:ml-0 sm:top-10 md:mt-0 ${
               menu ? "sm:ml-[96vw] md:ml-0" : "sm:-ml-[1vw] md:ml-0"
             }  sm:bg-richblack-100 md:bg-transparent sm:bg-opacity-20 sm:backdrop-blur-lg sm:flex sm:items-center sm:justify-center sm:z-10 transition-all ease-in duration-100 sm:rounded-lg`}
           >
-            <ul className="flex sm:flex-col md:flex-row gap-x-6 sm:items-center sm:justify-center text-richblack-25 sm:leading-[60px] sm:text-xl md:text-[16px] md:font-normal ">
+            <ul className="h-12 flex sm:flex-col md:flex-row gap-x-6 sm:items-center sm:justify-center text-richblack-25 sm:leading-[60px] sm:text-xl md:text-[16px] md:font-normal ">
               {NavbarLinks.map((link, index) => (
                 <li key={index}>
                   {link.title === "Catalog" ? (
@@ -73,7 +72,7 @@ function Navbar() {
                           : "sm:text-yellow-25 md:text-richblack-25"
                         }`}
                       >
-                        <p className="">{link.title}</p>
+                        <p className="h-12 flex items-center justify-center">{link.title}</p>
                         <AiFillDownCircle/>
                         <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[250px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]  ">
                           <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
@@ -104,7 +103,7 @@ function Navbar() {
                   ) : (
                     <Link to={link?.path} onClick={() => setmenu(true)}>
                       <p
-                        className={`tracking-wide ${
+                        className={`h-12 flex items-center justify-center tracking-wide ${
                           matchRoute(link?.path)
                             ? "sm:text-richblack-25 md:text-yellow-25"
                             : "sm:text-yellow-25 md:text-richblack-25"
@@ -144,12 +143,12 @@ function Navbar() {
           </div>
         </nav>
         {menu ? (
-          <button onClick={() => setmenu(false)} className="mr-4 md:hidden">
-            <BiMenuAltRight fontSize={30} color="white" />
+          <button onClick={() => setmenu(false)} className=" md:hidden">
+            <BiMenuAltRight fontSize={35} color="white" />
           </button>
         ) : (
-          <button onClick={() => setmenu(true)} className="mr-4 md:hidden">
-            <RxCross2 fontSize={30} color="white" />
+          <button onClick={() => setmenu(true)} className=" md:hidden">
+            <RxCross2 fontSize={35} color="white" />
           </button>
         )}
         <div className="hidden items-center gap-x-4 md:flex">

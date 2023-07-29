@@ -56,7 +56,7 @@ function Home() {
         {/* Video */}
         <div className=" mx-10 my-10 shadow-[10px_-5px_50px_-5px] shadow-blue-200 ">
           <video
-            className=" shadow-[20px_20px_rgba(255,255,255)] "
+            className=" md:shadow-[20px_20px_rgba(255,255,255)] sm:shadow-[15px_15px_rgba(255,255,255)] "
             muted
             loop
             autoPlay

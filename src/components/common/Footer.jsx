@@ -173,11 +173,11 @@ const Footer = () => {
           </div>
           <div className="text-center">Made with ❤️ | © 2023 StudyNotion</div>
 
-          <div className="lg:flex lg:flex-row sm:flex-col items-center gap-2">
-            <div className="text-center">Created By:</div>
-            <h1 className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent italic ">
+          <div className="lg:flex lg:flex-row sm:flex-col items-center ">
+            <div className="text-center mb-[4px]">Created By:</div>
+            <div className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent italic ">
               Gaurav Khalase
-            </h1>
+            </div>
           </div>
 
           {/* <div className="text-center text-lg animate-typing text-white overflow-hidden whitespace-nowrap border-r-2 border-r-white">Gaurav Khalase</div> */}
