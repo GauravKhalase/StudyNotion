@@ -30,14 +30,17 @@ async function sendVerificationEmail(email, otp) {
     console.log("Error occurred while sending email: ", error);
     throw error;
   }
-}
+} 
 
 OTPSchema.pre("save", async function (next) {
   console.log("New document saved to database");
 
-  if (this.isNew) {
-    await sendVerificationEmail(this.email, this.otp);
-  }
+  await sendVerificationEmail(this.email, this.otp);
+
+
+  // if (this.isNew) {
+  //   await sendVerificationEmail(this.email, this.otp);
+  // }
   next();
 });
 

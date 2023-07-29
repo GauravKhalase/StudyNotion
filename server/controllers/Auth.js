@@ -32,12 +32,12 @@ exports.sendotp = async (req, res) => {
     //check unique otp
     const result = await OTP.findOne({ otp: otp });
 
-    while (result) {
+    while (result) { 
       var otp = otpGenerator.generate(6, {
         upperCaseAlphabets: false,
         lowerCaseAlphabets: false,
         specialChars: false,
-      });
+      }); 
 
       result = await OTP.findOne({ otp: otp });
     }
