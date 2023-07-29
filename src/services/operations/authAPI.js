@@ -21,7 +21,7 @@ export function sendOtp(email, navigate) {
     try {
       const response = await apiConnector("POST", SENDOTP_API, {
         email,
-        checkUserPresent: true,
+        checkUserPresent: true, 
       })
       console.log("SENDOTP API RESPONSE............", response)
 
@@ -32,10 +32,13 @@ export function sendOtp(email, navigate) {
       }
 
       toast.success("OTP Sent Successfully")
+      console.log(1)
       navigate("/verify-email")
+      console.log(2)
     } catch (error) {
       console.log("SENDOTP API ERROR............", error)
-      toast.error("Could Not Send OTP")
+      // toast.error("Could Not Send OTP")
+      toast.error(SENDOTP_API)
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
