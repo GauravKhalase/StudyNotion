@@ -68,8 +68,8 @@ function Navbar() {
                       <div
                         className={`group relative flex cursor-pointer items-center gap-1 tracking-wide ${
                           matchRoute("/catalog/:catalogName")
-                          ? "sm:text-richblack-25 md:text-yellow-25"
-                          : "sm:text-yellow-25 md:text-richblack-25"
+                          ? "text-yellow-25"
+                          : "text-richblack-25"
                         }`}
                       >
                         <p className="h-12 flex items-center justify-center">{link.title}</p>
@@ -105,8 +105,8 @@ function Navbar() {
                       <p
                         className={`h-12 flex items-center justify-center tracking-wide ${
                           matchRoute(link?.path)
-                            ? "sm:text-richblack-25 md:text-yellow-25"
-                            : "sm:text-yellow-25 md:text-richblack-25"
+                            ? "text-yellow-25"
+                            : "text-richblack-25"
                         } `}
                       >
                         {link.title}
@@ -121,7 +121,7 @@ function Navbar() {
                   <Link to="/login">
                     <button
                       onClick={() => setmenu(true)}
-                      className="flex items-center justify-center h-[50px] w-[80vw] rounded-full border border-richblack-700 bg-richblack-800 sm:text-yellow-25 md:text-richblack-25"
+                      className="flex items-center justify-center h-[50px] w-[80vw] rounded-full border border-richblack-700 bg-richblack-800text-richblack-25"
                     >
                       Log in
                     </button>
@@ -131,7 +131,7 @@ function Navbar() {
                   <Link to="/signup">
                     <button
                       onClick={() => setmenu(true)}
-                      className="flex items-center justify-center h-[50px] w-[80vw] rounded-full border border-richblack-700 bg-richblack-800 sm:text-yellow-25 md:text-richblack-25"
+                      className="flex items-center justify-center h-[50px] w-[80vw] rounded-full border border-richblack-700 bg-richblack-800 text-richblack-25"
                     >
                       Sign up
                     </button>
